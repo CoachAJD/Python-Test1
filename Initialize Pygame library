@@ -1,0 +1,26 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the game window
+screen = pygame.display.set_mode((640, 480))
+
+# Game loop
+running = True
+while running:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                # Space bar pressed - do something
+                print("Space bar pressed")
+
+    # Update the screen
+    pygame.display.flip()
+
+# Quit Pygame
+pygame.quit()
+
